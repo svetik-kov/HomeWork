@@ -53,6 +53,8 @@ export const friendMessage0: MessageType = {
     },
 }
 
+//test
+
 const HW1 = () => {
     return (
         <div id={'hw1'}>
