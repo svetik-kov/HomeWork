@@ -53,7 +53,7 @@ export const friendMessage0: MessageType = {
     },
 }
 
-//test
+//test2
 
 const HW1 = () => {
     return (
