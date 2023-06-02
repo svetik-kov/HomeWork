@@ -3,6 +3,7 @@
     justify-content: flex-end;
     position: relative;
     margin-bottom: 50px;
+
 }
 
 .imageAndText {
@@ -16,6 +17,7 @@
 .imageAndText img {
     width: 48px;
     height: 48px;
+
 }
 
 .text {
