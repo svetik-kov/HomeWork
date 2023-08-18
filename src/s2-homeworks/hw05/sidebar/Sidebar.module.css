@@ -1,25 +1,99 @@
 .sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: absolute;
+    visibility: hidden;
+
+
 }
 
 .sidebar.open {
+
+    position: fixed;
+    visibility: visible; /* Показываем окно при активации цели */
+    opacity: 1;
+    z-index: 999; /* Находится над остальными элементами */
+
+    background: #FFF;
+    box-shadow: 0px 1px 2px 0px rgba(29, 33, 38, 0.10), 0px 10px 40px 0px rgba(29, 33, 38, 0.13);
+    width: 317px;
+    height: 720px;
+    flex-shrink: 0;
+
+
 }
 
 .background {
+    display: flex;
+    flex-direction: row;
+
 }
 
+
 .nav {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+
+
 }
 
 .nav a {
+    color: #000;
+    font-family: Montserrat;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration: none;
+    margin: 20px 20px;
+
 }
 
 .nav a:hover {
+    color: #3D6B99;
+    font-family: Montserrat;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration: none;
 }
 
 .nav a.active {
+    color: #0059B2;
+    font-family: Montserrat;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration-line: underline;
 }
+
 .close {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
 }
 
 .close img {
+
+    width: 24px;
+    height: 24px;
+
+}
+
+
+.example {
+    position: fixed; /* Фиксированное позиционирование относительно окна просмотра */
+    top: 50%; /* Расположение сверху на 50% */
+    left: 50%; /* Расположение слева на 50% */
+    transform: translate(-50%, -50%); /* Центрирование по центру */
+    background-color: #fff; /* Цвет фона */
+    padding: 20px; /* Отступы внутри окна */
+    border: 1px solid #000; /* Граница окна */
+    visibility: hidden; /* Скрываем окно */
 }
