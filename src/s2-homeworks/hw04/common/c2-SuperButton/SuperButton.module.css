@@ -12,6 +12,8 @@
     cursor: pointer;
     width: 133px;
     height: 30px;
+    margin: 5px;
+
 }
 
 .disabled {
