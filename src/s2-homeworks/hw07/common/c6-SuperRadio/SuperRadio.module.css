@@ -1,15 +1,33 @@
 .radio {
+    margin: 2px 7px;
+
 }
 
 .radio::before {
+
 }
 
 
 .radio:checked::before {
+
+
 }
 
 .label {
+
+    color: #000;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 11px;
+
 }
 
 .options {
+    display: flex;
+    flex-direction: column;
+
+
 }
