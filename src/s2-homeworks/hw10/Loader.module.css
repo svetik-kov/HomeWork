@@ -1,3 +1,11 @@
 .loader {
     /*свг и/или анимация*/
+
+    /*width: 20px; !* Установите ширину *!*/
+    /*height: 20px; !* Установите высоту *!*/
+    width: 90px;
+    height: 90px;
+    background-image: url('https://www.svgrepo.com/show/7849/loading.svg'); /* Установите путь к SVG-изображению */
+    background-size: cover;
+
 }
