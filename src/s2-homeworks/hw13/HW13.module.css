@@ -1,22 +1,62 @@
 .buttonsContainer {
+display: flex;
+    margin-top: 33px;
+    gap:24px
 }
 
 .responseContainer {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 106px;
+    margin-top: 33px;
+    gap:71px
+
 }
 
 .imageContainer {
+    margin-right: 10px;
+    gap: 10px;
+    border-radius:3px;
+    border:1px;
 }
 
 .image {
+
+
 }
 
 .textContainer{
+
+
+
 }
 
 .code {
+    font-family: Montserrat;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 37px;
+    letter-spacing: 0em;
+    text-align: left;
+
 }
 
 .text {
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+
 }
 .info {
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+
 }
