@@ -1,5 +1,11 @@
 .pagination {
     display: flex;
+    min-width: 610px;
+    gap: 20px;
+    align-items: center;
+    flex-direction: row;
+    margin: 32px 0 36px 0;
+    font-family: Roboto, sans-serif;
 }
 
 .text1 {

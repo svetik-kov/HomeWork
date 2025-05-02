@@ -34,7 +34,7 @@ const HW13 = () => {
         axios
             .post(url, {success: x})
             .then((res) => {
-                console.log(res.data.errorText)
+                //console.log(res.data.errorText)
                 setCode('Код 200!')
                 setImage(success200)
                 // дописать
@@ -42,7 +42,7 @@ const HW13 = () => {
                 setInfo(res.data.info)
             })
             .catch((e) => {
-                console.log(e.response.data)
+                //console.log(e.response.data)
                 // дописать
                 if (e.response.data) {
                     setCode(`Ошибка ${e.response.status}!`)
@@ -50,7 +50,7 @@ const HW13 = () => {
                     setText(e.response.data.errorText)
                     setInfo(e.response.data.info)
                 } else {
-                    console.log(e)
+                    //console.log(e)
 
                     setCode('Error!')
                     setText(e.message)

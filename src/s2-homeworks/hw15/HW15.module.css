@@ -25,3 +25,46 @@
 .loading {
 
 }
+
+
+.techHeader {
+    padding: 11px 17px 9px;
+}
+
+.developerHeader {
+    padding: 11px 17px 9px;
+}
+
+.myFirstClass {
+    max-width: 606px;
+    min-height: 216px;
+    margin-bottom: 100px;
+}
+
+.rowHeader {
+    grid-column: 1 / span 2; /* объединяем ячейки заголовка */
+    display: grid;
+    grid-template-columns: .3fr .3fr; /* равные столбцы */
+    grid-gap: 10px; /* отступ между ячейками */
+    margin-bottom: 10px;
+    background: #E5E5E5;
+    min-height: 36px;
+    width: 100%;
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16.41px;
+    text-align: left;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: .3fr .3fr; /* равные столбцы */
+    grid-gap: 24px; /* отступ между ячейками */
+    width: 100%;
+    padding: 10px;
+}
+
+.row:not(:last-child) {
+    border-bottom: 1px solid #E5E5E5;
+}

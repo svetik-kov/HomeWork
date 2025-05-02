@@ -47,38 +47,71 @@ const HW15 = () => {
     const [searchParams, setSearchParams] = useSearchParams()
     const [techs, setTechs] = useState<TechType[]>([])
 
+    /*const sendQuery = (params: any) => {
+        console.log(params)
+        setLoading(true)
+        getTechs(params)
+            .then((res) => {
+                console.log(res)
+                console.log(res?.data.techs)
+
+                // делает студент
+                setLoading(false)
+                // сохранить пришедшие данные
+                if (res?.data) {
+                    setTechs([...techs, ...res.data.techs])
+                    setTotalCount(res.data.totalCount)
+                }
+
+            })
+    }*/
     const sendQuery = (params: any) => {
         setLoading(true)
         getTechs(params)
             .then((res) => {
                 // делает студент
-
+                if (res) {
+                    setTechs(res.data.techs)
+                }
                 // сохранить пришедшие данные
-
-                //
             })
+            .finally(() => setLoading(false))
     }
 
     const onChangePagination = (newPage: number, newCount: number) => {
         // делает студент
-
-        // setPage(
+        setPage(newPage)
+        setCount(newCount)
+        sendQuery({page: newPage, count: newCount, sort: sort})
+        setSearchParams({page: String(newPage), count: String(newCount), sort: sort})
+       /* // setPage(
+        setPage(newPage)
         // setCount(
-
+        setCount(newCount)
         // sendQuery(
-        // setSearchParams(
+        sendQuery({sort, page: newPage, count: newCount})
+        setSearchParams({page: newPage.toString(), count: newCount.toString()})
+           setSearchParams({page: String(newPage), count: String(newCount), sort: sort})*/
 
-        //
     }
 
     const onChangeSort = (newSort: string) => {
         // делает студент
-
+        setSort(newSort)
+        setPage(1)
+        sendQuery({page: 1, count, sort: newSort})
+        setSearchParams({page: '1', count: String(count), sort: newSort})
+      /*  console.log('newSort:', newSort)
         // setSort(
-        // setPage(1) // при сортировке сбрасывать на 1 страницу
+        setSort(newSort)
+        setPage(1) // при сортировке сбрасывать на 1 страницу
+        sendQuery({page, count, sort: newSort});
+        setSearchParams({sort: newSort, page: page.toString(), count: count.toString()})*/
 
-        // sendQuery(
-        // setSearchParams(
+        // setSort(newSort)
+        //         setPage(1)
+        //         sendQuery({page: 1, count, sort: newSort})
+        //         setSearchParams({page: '1', count: String(count), sort: newSort})
 
         //
     }
@@ -135,3 +168,4 @@ const HW15 = () => {
 }
 
 export default HW15
+
