@@ -47,24 +47,7 @@ const HW15 = () => {
     const [searchParams, setSearchParams] = useSearchParams()
     const [techs, setTechs] = useState<TechType[]>([])
 
-    /*const sendQuery = (params: any) => {
-        console.log(params)
-        setLoading(true)
-        getTechs(params)
-            .then((res) => {
-                console.log(res)
-                console.log(res?.data.techs)
 
-                // делает студент
-                setLoading(false)
-                // сохранить пришедшие данные
-                if (res?.data) {
-                    setTechs([...techs, ...res.data.techs])
-                    setTotalCount(res.data.totalCount)
-                }
-
-            })
-    }*/
     const sendQuery = (params: any) => {
         setLoading(true)
         getTechs(params)
@@ -84,14 +67,6 @@ const HW15 = () => {
         setCount(newCount)
         sendQuery({page: newPage, count: newCount, sort: sort})
         setSearchParams({page: String(newPage), count: String(newCount), sort: sort})
-       /* // setPage(
-        setPage(newPage)
-        // setCount(
-        setCount(newCount)
-        // sendQuery(
-        sendQuery({sort, page: newPage, count: newCount})
-        setSearchParams({page: newPage.toString(), count: newCount.toString()})
-           setSearchParams({page: String(newPage), count: String(newCount), sort: sort})*/
 
     }
 
@@ -101,19 +76,7 @@ const HW15 = () => {
         setPage(1)
         sendQuery({page: 1, count, sort: newSort})
         setSearchParams({page: '1', count: String(count), sort: newSort})
-      /*  console.log('newSort:', newSort)
-        // setSort(
-        setSort(newSort)
-        setPage(1) // при сортировке сбрасывать на 1 страницу
-        sendQuery({page, count, sort: newSort});
-        setSearchParams({sort: newSort, page: page.toString(), count: count.toString()})*/
 
-        // setSort(newSort)
-        //         setPage(1)
-        //         sendQuery({page: 1, count, sort: newSort})
-        //         setSearchParams({page: '1', count: String(count), sort: newSort})
-
-        //
     }
 
     useEffect(() => {
